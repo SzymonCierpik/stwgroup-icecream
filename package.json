@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://SzymonCierpik.github.io/stw-icecream",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /stw-icecream/"
