@@ -1,0 +1,675 @@
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.products__title {
+  display: flex;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 39px;
+  letter-spacing: 0.04em;
+  color: $red-font;
+  margin-bottom: 144px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 55px;
+    margin-bottom: 150px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 66px;
+    margin-bottom: 259px;
+  }
+}
+.products__title--secondary {
+  display: flex;
+  text-align: center;
+  padding-top: 121px;
+  font-weight: 400;
+  padding-bottom: 15px;
+  font-family: $font-family-primary;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.04em;
+  color: $pink-font;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+.product__group {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 280px;
+  gap: 130px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 220px 220px 220px;
+    gap: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: 335px 335px 335px;
+    gap: 24px;
+  }
+}
+.product-item__title {
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white;
+  padding-top: 161px;
+  padding-bottom: 66px;
+  margin: 0;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 152px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 163px;
+    font-size: 30px;
+    line-height: 34px;
+    padding-bottom: 70px;
+  }
+  &::after {
+    content: '';
+    background-image: url(../images/ellipses.png);
+    position: absolute;
+    z-index: 3;
+    width: 26px;
+    height: 6px;
+    left: 126px;
+    bottom: 265px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 768px) {
+      left: 99px;
+      bottom: 270px;
+    }
+    @media screen and (min-width: 1280px) {
+      left: 149px;
+      bottom: 286px;
+    }
+  }
+}
+.product-item__background--primary {
+  position: relative;
+  background: $pink-font;
+  border-radius: 24px;
+  width: 280px;
+  height: 485px;
+
+  @media screen and (min-width: 768px) {
+    width: 220px;
+    height: 485px;
+    margin-bottom: 112px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 330px;
+    height: 525px;
+    margin-bottom: 119px;
+  }
+
+  &::before {
+    @media screen and (max-width: 767px) {
+      content: '';
+      background-image: url('../images/ice-cream.png');
+      position: absolute;
+      z-index: 3;
+      width: 90%;
+      height: 252px;
+      left: 17px;
+      top: -115px;
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+      screen and (min-resolution: 192dpi) and (max-width: 767px),
+      screen and (min-resolution: 2dppx) and (max-width: 767px) {
+      content: '';
+      background-image: url('../images/ice-cream@2x.png');
+      position: absolute;
+      z-index: 3;
+      width: 90%;
+      height: 252px;
+      left: 17px;
+      top: -115px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      content: '';
+      background-image: url('../images/ice-cream.png');
+      position: absolute;
+      top: -100px;
+      height: 226px;
+      z-index: 3;
+      width: 100%;
+      left: 3px;
+      top: -104px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1279px),
+      screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1279px),
+      screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1279px) {
+      content: '';
+      background-image: url('../images/ice-cream@2x.png');
+      position: absolute;
+      top: -100px;
+      height: 226px;
+      z-index: 3;
+      width: 100%;
+      left: 3px;
+      top: -104px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-width: 1280px) {
+      content: '';
+      background-image: url('../images/ice-cream.png');
+      position: absolute;
+      top: -209px;
+      height: 335px;
+      width: 100%;
+      z-index: 3;
+      left: 0px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 1280px),
+      screen and (min-resolution: 192dpi) and (min-width: 1280px),
+      screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+      content: '';
+      background-image: url('../images/ice-cream@2x.png');
+      position: absolute;
+      top: -209px;
+      height: 335px;
+      width: 100%;
+      z-index: 3;
+      left: 0px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.product-item__background--secondary {
+  position: relative;
+  background: $coffee;
+  border-radius: 24px;
+  width: 280px;
+  height: 485px;
+
+  @media screen and (min-width: 768px) {
+    width: 220px;
+    height: 485px;
+    margin-bottom: 112px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 329px;
+    height: 525px;
+    margin-bottom: 119px;
+  }
+
+  &::before {
+    @media screen and (max-width: 767px) {
+      content: '';
+      background-image: url('../images/ice-coffee.png');
+      position: absolute;
+      z-index: 3;
+      width: 90%;
+      height: 252px;
+      left: 17px;
+      top: -115px;
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+      screen and (min-resolution: 192dpi) and (max-width: 767px),
+      screen and (min-resolution: 2dppx) and (max-width: 767px) {
+      content: '';
+      background-image: url('../images/ice-coffee@2x.png');
+      position: absolute;
+      z-index: 3;
+      width: 90%;
+      height: 252px;
+      left: 17px;
+      top: -115px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      content: '';
+      background-image: url('../images/ice-coffee.png');
+      position: absolute;
+      top: -100px;
+      height: 226px;
+      z-index: 3;
+      width: 100%;
+      left: 3px;
+      top: -104px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1279px),
+      screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1279px),
+      screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1279px) {
+      content: '';
+      background-image: url('../images/ice-coffee@2x.png');
+      position: absolute;
+      top: -100px;
+      height: 226px;
+      z-index: 3;
+      width: 100%;
+      left: 3px;
+      top: -104px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-width: 1280px) {
+      content: '';
+      background-image: url('../images/ice-coffee.png');
+      position: absolute;
+      top: -209px;
+      height: 335px;
+      width: 100%;
+      z-index: 3;
+      left: 0px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 1280px),
+      screen and (min-resolution: 192dpi) and (min-width: 1280px),
+      screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+      content: '';
+      background-image: url('../images/ice-coffee@2x.png');
+      position: absolute;
+      top: -209px;
+      height: 335px;
+      width: 100%;
+      z-index: 3;
+      left: 0px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.product-item__background--tertiary {
+  position: relative;
+  background: $pistachio;
+  border-radius: 24px;
+  width: 280px;
+  height: 485px;
+  margin-bottom: 98px;
+  @media screen and (min-width: 768px) {
+    width: 220px;
+    height: 485px;
+    margin-bottom: 112px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 329px;
+    height: 525px;
+    margin-bottom: 119px;
+  }
+
+  &::before {
+    @media screen and (max-width: 767px) {
+      content: '';
+      background-image: url('../images/milkshakes.png');
+      position: absolute;
+      z-index: 3;
+      width: 90%;
+      height: 252px;
+      left: 17px;
+      top: -115px;
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+      screen and (min-resolution: 192dpi) and (max-width: 767px),
+      screen and (min-resolution: 2dppx) and (max-width: 767px) {
+      content: '';
+      background-image: url('../images/milkshakes@2x.png');
+      position: absolute;
+      z-index: 3;
+      width: 90%;
+      height: 252px;
+      left: 17px;
+      top: -115px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      content: '';
+      background-image: url('../images/milkshakes.png');
+      position: absolute;
+      top: -100px;
+      height: 226px;
+      z-index: 3;
+      width: 100%;
+      left: 3px;
+      top: -104px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1279px),
+      screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1279px),
+      screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1279px) {
+      content: '';
+      background-image: url('../images/milkshakes@2x.png');
+      position: absolute;
+      top: -100px;
+      height: 226px;
+      z-index: 3;
+      width: 100%;
+      left: 3px;
+      top: -104px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-width: 1280px) {
+      content: '';
+      background-image: url('../images/milkshakes.png');
+      position: absolute;
+      top: -209px;
+      height: 335px;
+      width: 100%;
+      z-index: 3;
+      left: 0px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 1280px),
+      screen and (min-resolution: 192dpi) and (min-width: 1280px),
+      screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+      content: '';
+      background-image: url('../images/milkshakes@2x.png');
+      position: absolute;
+      top: -209px;
+      height: 335px;
+      width: 100%;
+      z-index: 3;
+      left: 0px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.product-item__description--primary {
+  font-family: $font-family-secondary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $white;
+
+  padding-bottom: 30px;
+  padding-left: 41px;
+  padding-right: 39px;
+  margin: 0;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+.product-item__description--secondary {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $white;
+    padding-bottom: 40px;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-bottom: 62px;
+    font-size: 16px;
+  }
+}
+.product-item__dots {
+  fill: $white;
+}
+.product-item__icon {
+  fill: $red-font;
+}
+.product-item__btn {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: $white;
+}
+
+// * MODAL * //
+.backdrop {
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+  z-index: 6;
+}
+button:active .backdrop {
+  transform: translateY(100%);
+}
+.is-hidden {
+  transform: translateY(100%);
+  visibility: visible;
+  pointer-events: none;
+}
+.modal--primary {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+  background-color: $pink-font;
+  z-index: 7;
+  border-radius: 10px;
+  @media screen and (min-width: 768px) {
+    width: 80vw;
+    height: 80vh;
+  }
+  @media screen and (min-width: 1260px) {
+    width: 60vw;
+    height: 60vh;
+  }
+}
+.modal__btn--primary {
+  position: absolute;
+  border-radius: 50%;
+  border: none;
+  background-color: $pink-font;
+  right: 10px;
+  top: 10px;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  -webkit-box-shadow: 8px 8px 24px -8px rgba(1, 1, 1, 1);
+  -moz-box-shadow: 8px 8px 24px -8px rgba(1, 1, 1, 1);
+  box-shadow: 8px 8px 24px -8px rgba(1, 1, 1, 1);
+}
+.modal__description--primary {
+  text-align: center;
+  border-radius: 10px;
+  width: 70vw;
+  height: 70vh;
+  background-color: $pink-font;
+  font-family: $font-family-secondary;
+  color: $white;
+  margin: auto;
+  margin-top: 100px;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  @media screen and (min-width: 768px) {
+    width: 60vw;
+    height: 60vh;
+  }
+  @media screen and (min-width: 1260px) {
+    font-size: 16px;
+    width: 30vw;
+    height: 40vh;
+  }
+}
+.modal--secondary {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+  background-color: $coffee;
+  z-index: 7;
+  border-radius: 10px;
+  @media screen and (min-width: 768px) {
+    width: 80vw;
+    height: 80vh;
+  }
+  @media screen and (min-width: 1260px) {
+    width: 60vw;
+    height: 60vh;
+  }
+}
+.modal__btn--secondary {
+  position: absolute;
+  border-radius: 50%;
+  border: none;
+  background-color: $coffee;
+  right: 10px;
+  top: 10px;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  -webkit-box-shadow: 8px 8px 24px -8px rgba(1, 1, 1, 1);
+  -moz-box-shadow: 8px 8px 24px -8px rgba(1, 1, 1, 1);
+  box-shadow: 8px 8px 24px -8px rgba(1, 1, 1, 1);
+}
+
+.modal__description--secondary {
+  text-align: center;
+  border-radius: 10px;
+  width: 70vw;
+  height: 70vh;
+  background-color: $coffee;
+  font-family: $font-family-secondary;
+  color: $white;
+  margin: auto;
+  margin-top: 100px;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  @media screen and (min-width: 768px) {
+    width: 60vw;
+    height: 60vh;
+  }
+  @media screen and (min-width: 1260px) {
+    font-size: 16px;
+    width: 30vw;
+    height: 40vh;
+  }
+}
+.modal--tertiary {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+  background-color: $pistachio;
+  z-index: 7;
+  border-radius: 10px;
+  @media screen and (min-width: 768px) {
+    width: 80vw;
+    height: 80vh;
+  }
+  @media screen and (min-width: 1260px) {
+    width: 60vw;
+    height: 60vh;
+  }
+}
+.modal__btn--tertiary {
+  position: absolute;
+  border-radius: 50%;
+  border: none;
+  background-color: $pistachio;
+  right: 10px;
+  top: 10px;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  -webkit-box-shadow: 8px 8px 24px -8px rgba(1, 1, 1, 1);
+  -moz-box-shadow: 8px 8px 24px -8px rgba(1, 1, 1, 1);
+  box-shadow: 8px 8px 24px -8px rgba(1, 1, 1, 1);
+}
+.modal__description--tertiary {
+  text-align: center;
+  border-radius: 10px;
+  width: 70vw;
+  height: 70vh;
+  background-color: $pistachio;
+  font-family: $font-family-secondary;
+  color: $white;
+  margin: auto;
+  margin-top: 100px;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  @media screen and (min-width: 768px) {
+    width: 60vw;
+    height: 60vh;
+  }
+  @media screen and (min-width: 1260px) {
+    font-size: 16px;
+    width: 30vw;
+    height: 40vh;
+  }
+}

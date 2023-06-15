@@ -1,0 +1,179 @@
+.collage {
+  background-image: linear-gradient(to bottom, $pink-background 40%, $white 40%);
+
+  &__container {
+    padding: 0;
+  }
+
+  &__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    overflow: hidden;
+  }
+}
+.slider {
+  padding-top: 80px;
+  padding-bottom: 170px;
+
+  @media screen and (min-width: 768px) {
+    &__container {
+      padding: 0 74px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    &__container {
+      padding-left: 178px;
+      padding-right: 176px;
+    }
+  }
+
+  &__list {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 29px;
+
+    @media screen and (min-width: 768px) {
+      gap: 19px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      gap: 15px;
+    }
+  }
+
+  &__box {
+    padding: 0 50px;
+    background-color: $slider-background;
+    display: flex;
+    flex-direction: column;
+    padding-top: 43px;
+    padding-bottom: 20px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      padding-left: 60px;
+      padding-right: 36px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding-left: 59px;
+      padding-right: 54px;
+    }
+
+    &::before {
+      content: '';
+      background-image: url('../images/quote.png');
+      width: 54px;
+      height: 40px;
+      position: absolute;
+      top: 28px;
+      left: 61px;
+      z-index: 1;
+
+      @media screen and (min-width: 768px) {
+        background-image: url('../images/quote@2x.png');
+        left: 60px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      @media screen and (min-width: 1280px) {
+        background-image: url('../images/quote@3x.png');
+        left: 44px;
+      }
+    }
+
+    &::after {
+      content: '';
+      background-image: url(../images/testimonial-elipse-group.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 4px;
+      position: absolute;
+      bottom: -30px;
+      z-index: 2;
+
+      @media screen and (min-width: 768px) {
+        bottom: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @media screen and (min-width: 1280px) {
+        bottom: -15px;
+        left: 400px;
+      }
+    }
+  }
+
+  &__review {
+    font-family: $font-family-secondary;
+    font-size: 12px;
+    line-height: 2.55;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding-left: 7px;
+    padding-right: 16px;
+    padding-bottom: 6px;
+    margin-top: 0;
+    z-index: 2;
+    margin-bottom: 0;
+    text-align: center;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      $transparent,
+      $transparent 30px,
+      $grey-line 1px,
+      $grey-line 31px
+    );
+
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 2.16;
+      padding-left: 20px;
+      padding-right: 44px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+      line-height: 1.86;
+      padding-left: 28px;
+      padding-right: 35px;
+    }
+  }
+
+  &__customer {
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-family: $font-family-secondary;
+    font-size: 14px;
+    line-height: 1.86;
+    font-weight: 500;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 14px;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-top: 15px;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

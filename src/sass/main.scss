@@ -1,0 +1,25 @@
+/*
+ * Główny plik dla stylów.
+ * Wszystkie partials podłączamy tutaj.
+ */
+
+// Style dla pliku z przykładem HTML fragmentu
+
+@import './modern-normalize';
+@import './variables';
+@import './container';
+@import './header'; //Paweł Bogusz
+@import './icecream'; //Tomasz Ostaszewski
+@import './about'; //Tomasz Palica
+@import './product'; //Weronika Niemczyk
+@import './weight'; //Szymon Śliwa
+@import './gallery'; //Vincent Słomiński
+@import './slider'; //Vincent Słomińsi-slider
+@import './contacts'; //Szymon Prus
+@import './footer'; //Waldemar Kubiak
+@import './menu'; //Szymon Cierpik
+
+@import './key-frames'; //Tomasz Ostaszewski
+@import './read-more'; //Tomasz Ostaszewski
+@import './map-modal'; //Tomasz Ostaszewski
+@import './backdrop'; //Paweł Bogusz
