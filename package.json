@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://SzymonCierpik.github.io/stwgroup-icecream",
+  "homepage": "https://stwgroup-icecream.netlify.app",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url https://stwgroup-icecream.netlify.app"
+    "build": "parcel build src/*.html --public-url"
   },
   "repository": {
     "type": "git",
