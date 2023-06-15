@@ -33,7 +33,6 @@ The code will automatically build and deploy the current version of the project 
 "scripts": {
   "build": "parcel build src/*.html --public-url /repository-name/"
 },
-},
 ```
 After some time, you will be able to see the live website at the URL specified in the updated homepage property, for example, https://username.github.io/repository-name.
 
