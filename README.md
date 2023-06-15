@@ -1,16 +1,19 @@
 # parcel-project-template
 
-## Zalezności
-
-Na komputerze musi być zainstalowana LTS-wersja [Node.js](https://nodejs.org/en/).
-
-## Przed rozpoczęciem pracy
-
-Jeden raz na projekt zainstalować wszystkie zalezności.
+## Dependencies
+You need to have the LTS version of Node.js installed on your computer.
 
 ```shell
 npm ci
 ```
+
+## Development
+Start the development server.
+
+```shell
+npm run dev
+```
+
 
 ### Praca
 
@@ -20,29 +23,20 @@ Włączyć tryp pracy.
 npm run dev
 ```
 
-W przeglądarce przejść na [http://localhost:1234](http://localhost:1234).
+Open your browser and go to [http://localhost:1234](http://localhost:1234) to view the project.
 
-### Deploy
-
-Kod będzie automatycznie się zbierać i robić deploy aktualnej wersji projektu 
-na GitHub Pages, w gałąź `gh-pages`, za kazdym razem jeśli zostaną wprowadzone zmiany w `main`. Na przykład, po bezpośrenim push lub po przyjęciu pull-request. Aby to działało musimy w pliku `package.json` zmienić pole `homepage` i skrypt
-`build`, zmieniając `nazwe_uzytkownika` i `nazwe_repozytorium` na swoje.
+## Deployment
+The code will automatically build and deploy the current version of the project to GitHub Pages, specifically the gh-pages branch, whenever changes are made to the main branch. For example, after a direct push or when a pull request is merged. To make this work, you need to modify the homepage field and the build script in the package.json file, replacing username and repository-name with your own.
 
 ```json
-"homepage": "https://nazwa_uzytkownika.github.io/nazwa_repozytorium",
+"homepage": "https://username.github.io/repository-name",
 "scripts": {
-  "build": "parcel build src/*.html --public-url /nazwa_repozytorium/"
+  "build": "parcel build src/*.html --public-url /repository-name/"
+},
 },
 ```
+After some time, you will be able to see the live website at the URL specified in the updated homepage property, for example, https://username.github.io/repository-name.
 
-Po jakimś czasie stronę mozna będzie zobaczyć na zywo pod adresem który 
-jest wpisany w poprawione właściwości `homepage`, na przykład
-[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
-
-## Pliki i folderzy
-
-- Wszystkie partials plików styłów powinny być w folderze `src/sass` i importować się w
-  `src/sass/main.scss`
-- Zdjęcia dodawajcie w folder `src/images`, przed tym zoptymizujcie te zdjęcia które dodajecie. Program po prostu 
-  kopiuje wykorzystane zdjęcia aby system nie musiał optymizować je, bo na słabych komputerach 
-  to moze zająć duzo czasu.
+## Files and Folders
+All style partials should be located in the src/sass folder and imported into src/sass/main.scss.
+Add images to the src/images folder, and make sure to optimize them before adding. The build process simply copies the used images to avoid optimizing them each time, as it can be time-consuming on slower computers.
