@@ -1,4 +1,4 @@
-# parcel-project-template
+# stw-icecream 
 
 ## Dependencies
 You need to have the LTS version of Node.js installed on your computer.
