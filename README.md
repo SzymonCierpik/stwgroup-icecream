@@ -24,7 +24,7 @@ The final version of the project is deployed and hosted on GitHub Pages or a sim
 ----------------
 
 
-## Dependencies
+### Dependencies
 You need to have the LTS version of Node.js installed on your computer.
 
 ```shell
