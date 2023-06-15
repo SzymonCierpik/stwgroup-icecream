@@ -1,4 +1,4 @@
-# ICE CREAM MADE WITH PASSION
+# ICE CREAM - STW GROUP
 
 The project involves the development of a website using HTML and CSS. The main goal is to create a responsive and visually appealing web page. Here is a technical description of the project:  
 
